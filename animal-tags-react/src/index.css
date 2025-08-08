@@ -1,0 +1,85 @@
+:root{
+  --bg: #fff;
+  --box: #eee;
+  --border: #cfcfcf;
+  --selected-bg: #d8e8ff;
+  --selected-border: #7aa7ff;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  padding: 24px;
+  background: var(--bg);
+  color: #111;
+}
+
+.container { max-width: 980px; margin: 0 auto; }
+
+h1 { font-size: 22px; margin-bottom: 12px; }
+
+/* Form */
+.tag-form { display:flex; gap:8px; margin-bottom: 12px; }
+.tag-form input {
+  padding: 8px 10px; border-radius: 6px; border: 1px solid #ccc; flex:1;
+}
+.tag-form button { padding: 8px 12px; border-radius:6px; cursor:pointer; }
+
+/* Controls */
+.controls { margin-bottom: 14px; }
+
+/* Grid */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Each choice box */
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--box);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 200px;
+  max-width: 260px;
+}
+
+.choice .key {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:6px;
+  background:#fff;
+  border:1px solid #bdbdbd;
+  font-weight:700;
+  font-size:13px;
+}
+
+.choice .label { flex:1; }
+
+.choice .actions { display:flex; gap:6px; margin-left:8px; }
+
+.small { padding:6px 8px; border-radius:6px; cursor:pointer; border:1px solid #999; background:#fff; }
+.small.delete { border-color: #e07b7b; color:#b00; }
+
+/* selected appearance */
+.choice.selected {
+  background: var(--selected-bg);
+  border-color: var(--selected-border);
+}
+
+/* editing input */
+.edit-input {
+  padding:6px 8px;
+  border-radius:6px;
+  border:1px solid #aaa;
+  width: 100%;
+}
